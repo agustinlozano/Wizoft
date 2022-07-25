@@ -1,4 +1,4 @@
-import { styles } from 'config/styles'
+import { styles } from '../../config/styles'
 
 const IconLinkedIn = (props, { color = styles.hightAccent }) => {
   return (

@@ -1,4 +1,4 @@
-import { styles } from 'config/styles'
+import { styles } from '../../config/styles'
 
 const IconMail = (props, { color = styles.hightAccent }) => {
   return (
