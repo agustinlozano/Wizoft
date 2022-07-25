@@ -1,4 +1,5 @@
-import ThemeProvider from './contex/themeProvider'
+import ThemeProvider from './context/themeProvider'
+import PageRouters from './routes'
 import './App.css'
 
 function App () {
@@ -7,6 +8,7 @@ function App () {
       <div className='App'>
         <h1>Hello, world!</h1>
       </div>
+      <PageRouters />
     </ThemeProvider>
   )
 }
