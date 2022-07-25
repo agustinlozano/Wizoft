@@ -6,9 +6,8 @@ function App () {
   return (
     <ThemeProvider>
       <div className='App'>
-        <h1>Hello, world!</h1>
+        <PageRouters />
       </div>
-      <PageRouters />
     </ThemeProvider>
   )
 }
