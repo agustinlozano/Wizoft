@@ -1,7 +1,7 @@
-import IconDownload from 'components/ui/IconDownload'
-import IconGitHub from 'components/ui/IconGitHub'
-import IconLinkedIn from 'components/ui/IconLinkedIn'
-import IconMail from 'components/ui/IconMail'
+import IconDownload from '../components/ui/IconDownload'
+import IconGitHub from '../components/ui/IconGitHub'
+import IconLinkedIn from '../components/ui/IconLinkedIn'
+import IconMail from '../components/ui/IconMail'
 
 import { BUTTONS_TYPES } from './variableOfComponents'
 
