@@ -8,6 +8,8 @@ import MyPhoto from '../../assets/img/me.jpg'
 
 import Text from '../../components/atoms/Text'
 import Title from '../../components/atoms/Title'
+import TargetBlankButton from '../../components/atoms/TargetBlankButton'
+import LinkButton from '../../components/atoms/LinkButton'
 
 import {
   ButtonLinksContainer,
@@ -27,15 +29,13 @@ const Home = () => {
         <ToggleLinkLeft>
           {socialMediaLinks.map(({ title, url, icon }) => {
             return (
-              <a
+              <TargetBlankButton
                 key={title}
-                href={url}
-              // icon={icon}
-                rel='noreferrer'
+                title={title}
+                url={url}
+                icon={icon}
                 type={BUTTONS_TYPES.icon}
-              >
-                {title}
-              </a>
+              />
             )
           })}
         </ToggleLinkLeft>
@@ -53,16 +53,15 @@ const Home = () => {
         <ButtonLinksContainer>
           {linksToToggleMenu.slice(1).map(({ title, url, icon, type }) => {
             return (
-              <a
+              <LinkButton
                 key={title}
-                href={url}
                 title={title}
+                url={url}
                 icon={icon}
-                rel='noreferrer'
                 type={type || BUTTONS_TYPES.primary}
               >
-                {title}
-              </a>
+                {icon}
+              </LinkButton>
             )
           })}
         </ButtonLinksContainer>
