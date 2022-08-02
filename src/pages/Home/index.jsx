@@ -1,10 +1,13 @@
 import {
   BUTTONS_TYPES,
-  // TEXT_ALIGN,
+  TEXT_ALIGN,
   TITLE_TYPES
 } from '../../config/variableOfComponents'
 import { linksToToggleMenu, socialMediaLinks } from '../../config/globalLinks'
 import MyPhoto from '../../assets/img/me.jpg'
+
+import Text from '../../components/atoms/Text'
+import Title from '../../components/atoms/Title'
 
 import {
   ButtonLinksContainer,
@@ -40,13 +43,13 @@ const Home = () => {
 
       <RigthContent>
         <HeaderContainer>
-          <p type={TITLE_TYPES.secondary}>Agustin B. Lozano</p>
-          <p type={TITLE_TYPES.primary}>Software Engineer</p>
+          <Title type={TITLE_TYPES.secondary}>Agustin B. Lozano</Title>
+          <Title type={TITLE_TYPES.primary}>Software Engineer</Title>
         </HeaderContainer>
-        <p>
+        <Text align={TEXT_ALIGN.left}>
           ¡Hola! Soy un desarrollador que ofrece servicios en el área de backend, frontend y soluciones de sistemas.
           Te invito a que conozcas más acerca mí y como puedo ayudarte a impulsar tu negocio.
-        </p>
+        </Text>
         <ButtonLinksContainer>
           {linksToToggleMenu.slice(1).map(({ title, url, icon, type }) => {
             return (
