@@ -3,7 +3,7 @@ import { styles } from '../../config/styles'
 const Logo = (props) => {
   return (
     <svg
-      viewBox='79.735 168.765 450 105.856'
+      viewBox='90 168.765 450 105.856'
       width='15rem'
       xmlns='http://www.w3.org/2000/svg'
       {...props}
