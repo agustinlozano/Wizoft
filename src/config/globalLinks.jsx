@@ -12,7 +12,7 @@ export const linksToToggleMenu = [
     icon: null
   },
   {
-    title: 'Mi Historia',
+    title: 'Sobre mí',
     url: '/about-me',
     icon: null
   },
@@ -32,7 +32,7 @@ export const linksToToggleMenu = [
     icon: null
   },
   {
-    title: 'Curriculum',
+    title: 'Currículum',
     url: '/curriculum',
     type: BUTTONS_TYPES.secondary,
     icon: <IconDownload />
