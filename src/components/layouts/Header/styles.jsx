@@ -8,14 +8,13 @@ export const HeaderBox = styled.header`
   top: 0;
   width: 100%;
   padding: 16px 24px;
-  border-bottom: 1px solid ${styles.lowAccent};
   background-color: ${styles.background};
   z-index: 10;
 
   @media (min-width: ${styles.desktopQuery}) {
-    border: 1px solid transparent;
     background-color: ${styles.transparentBackground};
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid ${styles.hightlightAccent};
   }
 `
 
