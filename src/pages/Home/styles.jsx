@@ -14,11 +14,11 @@ export const HomeContainer = styled.section`
   @media (min-width: ${styles.desktopQuery}) {
     margin-bottom: 0;
     display: grid;
-    grid-template-columns: minmax(500px, 0.5fr) 1fr;
-    column-gap: 80px;
+    grid-template-columns: minmax(740px, 1fr) 1fr;
+    height: 100%;
     align-items: center;
+    column-gap: 60px;
     padding-top: 0;
-    padding-bottom: 100px;
   }
 `
 
@@ -35,10 +35,10 @@ export const ToggleLinkLeft = styled.div`
 `
 
 export const LeftContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  @media (min-width: ${styles.desktopQuery}) {
+    width: 100%;
+    max-width: 740px;
+  }
 `
 
 export const HeaderContainer = styled.div`
@@ -65,7 +65,12 @@ export const ToggleLinksContainer = styled.div`
   }
 `
 
-export const RigthContent = styled.div`
+export const RightContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
   @media (min-width: ${styles.desktopQuery}) {
     width: 100%;
     max-width: 740px;
@@ -83,4 +88,18 @@ export const LogoImage = styled.img`
     box-shadow: 0 0 0 8px ${styles.lowAccent};
     max-width: 60%;
   }
+`
+
+export const HighlightText = styled.span`
+  color: ${styles.hightlightAccent};
+  font-weight: 700;
+`
+
+export const ScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0;
 `
