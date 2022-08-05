@@ -14,6 +14,7 @@ export const styles = {
   mediumAccent: 'var(--medium-accent)',
   hightAccent: 'var(--hight-accent)',
   darkAccent: 'var(--dark-accent)',
+  hightlightAccent: 'var(--hightlight-accent)',
   transparentBackground: 'var(--transparent-background)',
 
   /* shadow */
@@ -23,6 +24,7 @@ export const styles = {
   /* media querys */
   maxButtonWidth: '320px',
   desktopQuery: '950px',
+  mobileQuery: '650px',
   headerMaxWidth: '1024px',
   LayoutMaxWidth: '1440px',
 

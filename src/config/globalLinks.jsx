@@ -39,6 +39,36 @@ export const linksToToggleMenu = [
   }
 ]
 
+export const serviceLinks = [
+  {
+    title: 'Sitios web',
+    icon: null
+  },
+  {
+    title: 'Blogs',
+    icon: null
+  },
+  {
+    title: 'RESTfull API\'s'
+  },
+  {
+    title: 'Tiendas online',
+    icon: null
+  },
+  {
+    title: 'Diseño UI',
+    icon: null
+  },
+  {
+    title: 'SaaS',
+    icon: null
+  },
+  {
+    title: 'Diseño de Bases de Datos',
+    icon: null
+  }
+]
+
 export const socialMediaLinks = [
   {
     title: 'GitHub',
