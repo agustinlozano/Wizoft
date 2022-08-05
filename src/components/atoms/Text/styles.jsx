@@ -6,7 +6,7 @@ import { handleSelectStyleFromType } from './handleSelectStyleFromType'
 
 export const Paragraph = styled.p`
   color: ${styles.darkAccent};
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
 
   @media (min-width: ${styles.desktopQuery}) {

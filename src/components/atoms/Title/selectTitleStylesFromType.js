@@ -4,6 +4,10 @@ import { TITLE_TYPES } from '../../../config/variableOfComponents'
 const secondaryStyle = `
   font-size: 24px;
   font-family: ${styles.fontMedium};
+
+  @media(max-width: ${styles.mobileQuery}) {
+    font-size: 1rem;
+  }
 `
 
 const primaryStyle = `
