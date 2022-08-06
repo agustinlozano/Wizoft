@@ -27,6 +27,6 @@ export const bounce = keyframes`
 `
 
 export const BounceAnchor = styled.a`
-  width: 80px;
+  width: 50px;
   cursor: pointer;
 `
