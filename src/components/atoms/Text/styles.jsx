@@ -10,9 +10,12 @@ export const Paragraph = styled.p`
   text-align: center;
 
   @media (min-width: ${styles.desktopQuery}) {
-    padding-top: 40px;
     margin-top: 0;
     ${({ align }) => handleSelectAlign(align)}
+  }
+
+  @media(max-width: ${styles.mobileQuery}) {
+    font-size: 1rem;
   }
 
   ${({ type }) => handleSelectStyleFromType(type)}

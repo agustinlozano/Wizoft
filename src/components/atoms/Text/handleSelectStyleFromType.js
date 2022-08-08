@@ -2,7 +2,7 @@ import { styles } from '../../../config/styles'
 import { TEXT_TYPES } from '../../../config/variableOfComponents'
 
 const lowTextStyle = `
-@media (min-width: ${styles.desktopQuery}) {
+  @media (min-width: ${styles.desktopQuery}) {
     padding-top: 16px;
     padding-bottom: 16px;
     margin: 0;
@@ -13,6 +13,11 @@ const lowTextStyle = `
 const normalTextStyle = `
   padding-top: 48px;
   padding-bottom: 40px;
+
+  @media (max-width: ${styles.mobileQuery}) {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 `
 
 const allStylesFromType = {
