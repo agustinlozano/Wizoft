@@ -6,19 +6,25 @@ const secondaryStyle = `
   font-family: ${styles.fontMedium};
 
   @media(max-width: ${styles.mobileQuery}) {
+    text-align: center;
     font-size: 1rem;
   }
 `
 
 const primaryStyle = `
-  font-size: 48px;
+  font-size: 3rem;
   margin-top: 8px;
   margin-bottom: 8px;
   font-family: ${styles.fontBlack};
   
   @media(min-width: ${styles.desktopQuery}) {
-    font-size: 64px;
+    font-size: 69px;
     margin-top: 0;
+  }
+
+  @media(max-width: ${styles.mobileQuery}) {
+    text-align: center;
+    font-size: 2.6rem;
   }
 `
 
