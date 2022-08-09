@@ -8,14 +8,10 @@ export const HeaderBox = styled.header`
   top: 0;
   width: 100%;
   padding: 16px 24px;
-  background-color: ${styles.background};
   z-index: 10;
-
-  @media (min-width: ${styles.desktopQuery}) {
-    background-color: ${styles.transparentBackground};
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid ${styles.hightlightAccent};
-  }
+  background-color: ${styles.transparentBackground};
+  border-bottom: 1px solid ${styles.hightlightAccent};
+  backdrop-filter: blur(6px);
 `
 
 export const HeaderContainerOptions = styled.div`
