@@ -4,7 +4,7 @@ const Logo = (props) => {
   return (
     <svg
       viewBox='90 168.765 450 105.856'
-      width='15rem'
+      width='100%'
       xmlns='http://www.w3.org/2000/svg'
       {...props}
     >
@@ -44,7 +44,8 @@ const Logo = (props) => {
         id='g154'
         transform='matrix(.15941 0 0 .15941 411.265 175.17)'
         style={{
-          fill: '#ccc'
+          fill: '#ccc',
+          width: ''
         }}
       >
         <path
