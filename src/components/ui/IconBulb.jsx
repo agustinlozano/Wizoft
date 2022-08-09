@@ -1,13 +1,13 @@
 import { styles } from '../../config/styles'
 
-const IconBulb = () => {
+const IconBulb = ({ width }) => {
   return (
     <svg
       id='Layer_1'
       data-name='Layer 1'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 43.82 60.11'
-      width='35px'
+      width={width}
     >
       <defs>
         <style>{'\n      .cls-1{fill:#616466}.cls-4{fill:#94989b}\n    '}</style>
