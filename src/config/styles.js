@@ -23,7 +23,8 @@ export const styles = {
 
   /* media querys */
   maxButtonWidth: '320px',
-  desktopQuery: '950px',
+  desktopQuery: '1024px',
+  tabletQuery: '768px',
   mobileQuery: '650px',
   headerMaxWidth: '1024px',
   LayoutMaxWidth: '1440px',
