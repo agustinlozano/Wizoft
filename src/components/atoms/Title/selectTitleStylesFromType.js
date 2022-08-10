@@ -5,26 +5,32 @@ const secondaryStyle = `
   font-size: 24px;
   font-family: ${styles.fontMedium};
 
-  @media(max-width: ${styles.mobileQuery}) {
+  @media(max-width: ${styles.tabletQuery}) {
     text-align: center;
-    font-size: 1rem;
+  }
+
+  @media(max-width: ${styles.mobileQuery}) {
+    font-size: 0.8rem;
   }
 `
 
 const primaryStyle = `
-  font-size: 3rem;
+  font-size: 69px;
   margin-top: 8px;
   margin-bottom: 8px;
   font-family: ${styles.fontBlack};
   
   @media(min-width: ${styles.desktopQuery}) {
-    font-size: 69px;
     margin-top: 0;
   }
 
-  @media(max-width: ${styles.mobileQuery}) {
+  @media(max-width: ${styles.tabletQuery}) {
+    font-size: 3.1rem;
     text-align: center;
-    font-size: 2.6rem;
+  }
+
+  @media(max-width: ${styles.mobileQuery}) {
+    font-size: 2.5rem;
   }
 `
 
