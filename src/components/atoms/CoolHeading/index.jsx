@@ -1,9 +1,9 @@
 import { Text } from './styles'
 
-const CoolTitle = ({ children }) => {
+const CoolHeading = ({ children }) => {
   return (
     <Text>{children}</Text>
   )
 }
 
-export default CoolTitle
+export default CoolHeading
