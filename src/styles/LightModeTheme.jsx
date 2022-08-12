@@ -11,6 +11,7 @@ const LightModeTheme = () => {
           --medium-accent: #666666;
           --hight-accent: #0b090a;
           --dark-accent: #000000;
+          --gray-accent: #6c757d;
           --hightlight-accent: #fb8500;
           --transparent-background: hsla(0, 0%, 100%, 0.8);
 

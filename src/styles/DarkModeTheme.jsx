@@ -11,6 +11,7 @@ const DarkModeTheme = () => {
           --medium-accent: #eaeaea;
           --hight-accent: #fafafa;
           --dark-accent: #fff;
+          --gray-accent: #6c757d;
           --hightlight-accent: #fb8500;
           --transparent-background: rgba(0, 0, 0, 0.8);
 
