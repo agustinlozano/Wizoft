@@ -14,6 +14,7 @@ export const styles = {
   mediumAccent: 'var(--medium-accent)',
   hightAccent: 'var(--hight-accent)',
   darkAccent: 'var(--dark-accent)',
+  grayAccent: 'var(--gray-accent)',
   hightlightAccent: 'var(--hightlight-accent)',
   transparentBackground: 'var(--transparent-background)',
 
