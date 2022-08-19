@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import PropTypes from 'prop-types'
-import { ThemeContext } from '../../../context/themeProvider'
+import { ThemeContext } from '../../../context/ThemeProvider'
 
 import { BoxContainer, Circle, ThemeButtonContainer, ThemeText } from './styles'
 
