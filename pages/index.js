@@ -34,26 +34,39 @@ import {
   StagesContainer
 } from './styles'
 
-export default function Home() {
-  const isMobileView = false
-  const isDesktopView = true
+import { useEffect, useState } from 'react'
 
-  return (
+export default function Home() {
+  const [isDesktop, setDesktop] = useState(undefined)
+  
+  useEffect(() => {
+    const updateDesktop = () => {
+      setDesktop(window.innerWidth >= 1024)
+    }
+
+    updateDesktop()
+    window.addEventListener('resize', updateDesktop)
+    return () => {
+      window.removeEventListener('resize', updateDesktop)
+    }
+  }, [])
+
+  return typeof isDesktop != 'undefined' ? (
     <>
       <HomeContainer>
         <LeftContent>
           <HeaderContainer>
             <Title type={TITLE_TYPES.secondary}>SERVICIOS & SOLUCIONES WEB</Title>
             <Title type={TITLE_TYPES.primary}>
-              {isMobileView
+              {isDesktop
                 ? (
-                  <>
-                    UNITE A LA REVOLUCIÓN DIGITAL Y POTENCIÁ <IconBulb width='25' /> TU NEGOCIO<HighlightText>.</HighlightText>
-                  </>)
-                : (
                   <>
                     Unite a la revolución digital y potenciá <IconBulb width='35' /> tu negocio como nunca antes
                     <HighlightText>.</HighlightText>
+                  </>)
+                : (
+                  <>
+                    UNITE A LA REVOLUCIÓN DIGITAL Y POTENCIÁ <IconBulb width='25' /> TU NEGOCIO<HighlightText>.</HighlightText>
                   </>)}
             </Title>
           </HeaderContainer>
@@ -61,13 +74,13 @@ export default function Home() {
             Accede al paquete que mejor se ajuste a tus necesidades y empezá a trabajar
             de manera eficiente e inteligente con la <i>magia arcana</i> de <HighlightText><i>Wizoft</i></HighlightText>.
           </Text>
-          {isMobileView
-            ? (
+          {isDesktop
+            ? null
+            : (
               <ScrollContainer>
                 <ScrollButton />
               </ScrollContainer>
-              )
-            : null}
+              )}
         </LeftContent>
         <RightContent>
           <ButtonLinksContainer>
@@ -110,7 +123,7 @@ export default function Home() {
                 >
                   <HighlightText>#{index + 1} </HighlightText>{title}
                 </UpperText>
-                <Subtitle align={isDesktopView ? TEXT_ALIGN.left : TEXT_ALIGN.center}>{subtitle}</Subtitle>
+                <Subtitle align={isDesktop ? TEXT_ALIGN.left : TEXT_ALIGN.center}>{subtitle}</Subtitle>
                 <Text type={TEXT_TYPES.low} align={TEXT_ALIGN.left}>{description}</Text>
               </div>
             )
@@ -118,5 +131,5 @@ export default function Home() {
         </StagesContainer>
       </DevelopmentStages>
     </>
-  )
+  ) : null
 }
