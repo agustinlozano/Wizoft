@@ -3,10 +3,9 @@ import { LightHeading } from './styles'
 
 const Subtitle = ({
   children,
-  align = TEXT_ALIGN.normal
 }) => {
   return (
-    <LightHeading align={align}>
+    <LightHeading>
       {children}
     </LightHeading>
   )
