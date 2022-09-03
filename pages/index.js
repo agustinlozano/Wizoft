@@ -38,49 +38,56 @@ import { useEffect, useState } from 'react'
 
 export default function Home() {
   const [isDesktop, setDesktop] = useState(undefined)
-  
+  const [isMobile, setMobile] = useState(undefined)
+
   useEffect(() => {
-    const updateDesktop = () => {
-      setDesktop(window.innerWidth >= 1024)
+    const updateWindowSize = () => {
+      if (window.innerWidth < 768) {
+        setMobile(true)
+        setDesktop(false)
+      }
+      if (window.innerWidth > 1024) {
+        setDesktop(true)
+        setMobile(false)
+      }
     }
 
-    updateDesktop()
-    window.addEventListener('resize', updateDesktop)
+    updateWindowSize()
+    window.addEventListener('resize', updateWindowSize)
     return () => {
-      window.removeEventListener('resize', updateDesktop)
+      window.removeEventListener('resize', updateWindowSize)
     }
   }, [])
 
-  return typeof isDesktop != 'undefined' ? (
+  return typeof isDesktop != 'undefined' || typeof isMobile != 'undefined' ? (
     <>
       <HomeContainer>
         <LeftContent>
           <HeaderContainer>
             <Title type={TITLE_TYPES.secondary}>SERVICIOS & SOLUCIONES WEB</Title>
             <Title type={TITLE_TYPES.primary}>
-              {isDesktop
+              {isMobile
                 ? (
                   <>
-                    Unite a la revolución digital y potenciá <IconBulb width='35' /> tu negocio como nunca antes
-                    <HighlightText>.</HighlightText>
+                    UNITE A LA REVOLUCIÓN DIGITAL Y POTENCIÁ <IconBulb width='25' /> TU NEGOCIO<HighlightText>.</HighlightText>
                   </>)
                 : (
                   <>
-                    UNITE A LA REVOLUCIÓN DIGITAL Y POTENCIÁ <IconBulb width='25' /> TU NEGOCIO<HighlightText>.</HighlightText>
+                    Unite a la revolución digital y potenciá <IconBulb width='35' /> tu negocio como nunca antes
+                    <HighlightText>.</HighlightText>
                   </>)}
             </Title>
           </HeaderContainer>
           <Text type={TEXT_TYPES.normal} align={TEXT_ALIGN.left}>
-            Accede al paquete que mejor se ajuste a tus necesidades y empezá a trabajar
+            Accedé al paquete que mejor se ajuste a tus necesidades y empezá a trabajar
             de manera eficiente e inteligente con la <i>magia arcana</i> de <HighlightText><i>Wizoft</i></HighlightText>.
           </Text>
-          {isDesktop
-            ? null
-            : (
+          {isMobile
+            ? (
               <ScrollContainer>
                 <ScrollButton />
               </ScrollContainer>
-              )}
+            ) : null}
         </LeftContent>
         <RightContent>
           <ButtonLinksContainer>
@@ -123,7 +130,7 @@ export default function Home() {
                 >
                   <HighlightText>#{index + 1} </HighlightText>{title}
                 </UpperText>
-                <Subtitle align={isDesktop ? TEXT_ALIGN.left : TEXT_ALIGN.center}>{subtitle}</Subtitle>
+                <Subtitle>{subtitle}</Subtitle>
                 <Text type={TEXT_TYPES.low} align={TEXT_ALIGN.left}>{description}</Text>
               </div>
             )
