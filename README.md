@@ -1,4 +1,4 @@
-## 💼 Wizoft & personal portfolio
+## [Dropped out] 💼 Wizoft & personal portfolio
 
 En este proyecto voy a estar construyendo el sitio web para mi emprendimiento de servicios de software y servicios web, además, voy a alojar mi portfolio personal aquí mismo.
 
